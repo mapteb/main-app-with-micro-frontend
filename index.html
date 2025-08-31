@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://localhost:8081/dist/my-widget.iife.js"></script>	
+  </head>
+  <body>
+    <button name="btn123" class="cartUpdBtn" onclick="emitCustomEvent()">Emit Custom Event</button>
+	<div>	
+		<my-widget></my-widget>
+	</div>
+	
+	<script type="text/javascript">
+	  function emitCustomEvent() {
+		const event = new CustomEvent('my-custom-event', {
+							  detail: { message: 'Hello from outside!' },
+							  bubbles: true,
+							  composed: true
+							});
+		document.querySelector(".cartUpdBtn").dispatchEvent(event);
+	  }
+	</script>	
+  </body>
+</html>
