@@ -16,4 +16,6 @@ Since this app has just one html file, it can be run directly like:
 http-server << accessing http://localhost:8080 should display the button and the embedded micro frontend >>
 
 
+## Screenshots
 
+Wiki Page: [Screenshots](https://github.com/mapteb/main-app-with-micro-frontend/wiki)
