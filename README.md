@@ -18,4 +18,4 @@ http-server << accessing http://localhost:8080 should display the button and the
 
 ## Screenshots
 
-Wiki Page: [Screenshots](https://github.com/mapteb/main-app-with-micro-frontend/wiki)
+Wiki Page: [Screenshots](https://github.com/mapteb/main-app-with-micro-frontend/wiki/Screenshots)
