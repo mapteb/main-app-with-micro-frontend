@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="http://localhost:8081/dist/my-widget.iife.js"></script>	
-  </head>
-  <body>
-    <button name="btn123" class="cartUpdBtn" onclick="emitCustomEvent()">Emit Custom Event</button>
-	<div>	
-		<my-widget></my-widget>
-	</div>
-	
-	<script type="text/javascript">
-	  function emitCustomEvent() {
-		const event = new CustomEvent('my-custom-event', {
-							  detail: { message: 'Hello from outside!' },
-							  bubbles: true,
-							  composed: true
-							});
-		document.querySelector(".cartUpdBtn").dispatchEvent(event);
-	  }
-	</script>	
-  </body>
+	<head>
+		<title>My App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+		<script src="http://localhost:8081/dist/my-widget.iife.js"></script>
+	</head>
+	<body>
+		<!-- Sidebar -->
+		<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+		  <h3 class="w3-bar-item">Menu</h3>
+		  <div class="w3-bar-item"><button name="btn123" class="cartUpdBtn" onclick="emitCustomEvent()">Emit Custom Event</button></div>
+		</div>
+
+		<!-- Embed the micro-frontend as a custom element -->
+		<div style="margin-left:25%">
+			<my-widget></my-widget>
+		</div>
+		  
+        <!-- Script to dispatch the event -->		  
+		<script type="text/javascript">
+		  function emitCustomEvent() {
+			const event = new CustomEvent('my-custom-event', {
+								  detail: { message: 'Hello from the Main App!' },
+								  bubbles: true,
+								  composed: true
+								});
+			document.querySelector(".cartUpdBtn").dispatchEvent(event);
+		  }
+		</script>
+	</body>
 </html>
