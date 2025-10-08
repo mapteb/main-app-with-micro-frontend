@@ -2,7 +2,8 @@
 
 ## Description
 
-This is a helloworld main web app that embeds a [micro frontend](https://github.com/mapteb/web-component-micro-frontend) as a custom element. This main app (localhost:8080) raises a custom event 'my-custom-event' and the embeded micro frontend app (localhost:8081) receives it and echoes the event.detail.message content.  
+This is a helloworld main web app that embeds a [micro frontend](https://github.com/mapteb/web-component-micro-frontend) as a custom element. This main app raises a custom event and the embeded micro frontend app receives it and echoes the event message content. A demo of this main app embedding an external web component can be viewed [here](https://mapteb.github.io/main-app-with-micro-frontend/).
+
 
 ## Usage
 
